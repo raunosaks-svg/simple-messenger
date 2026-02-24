@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Simple Messenger</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div id="login">
+        <h2>Sisesta oma nimi</h2>
+        <input id="usernameInput" placeholder="Sinu nimi..." />
+        <button id="enterBtn">Sisene</button>
+    </div>
+
+    <div id="chat" style="display:none;">
+        <div class="chat-container">
+            <div class="users">
+                <h3>Online</h3>
+                <ul id="userList"></ul>
+            </div>
+
+            <div class="chat-box">
+                <ul id="messages"></ul>
+                <form id="form">
+                    <input id="input" autocomplete="off" placeholder="Kirjuta sõnum..." />
+                    <button>Saada</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
